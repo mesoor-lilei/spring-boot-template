@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: local
+  mvc:
+    # 启用 NoHandlerFoundException
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  jackson:
+    # 返回给前端的 JSON 去除 null 值、空值属性
+    default-property-inclusion: non_empty
+  jpa:
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
